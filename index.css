@@ -1,0 +1,374 @@
+/* ================= Reset básico ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ================= Corpo ================= */
+body {
+  background-color: #fff8e1; /* amarelo claro */
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ================= Header ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffcc00;
+  border-bottom: 3px solid #cc0000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo-container img {
+  height: 250px;
+}
+
+/* Botão menu */
+#menu-toggle {
+  font-size: 1.5em;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* totalmente escondida */
+  width: 300px;
+  height: 100%;
+  background-color: #ffb300;
+  padding: 20px;
+  border-right: 3px solid #cc0000;
+  transition: left 0.3s ease;
+  z-index: 200;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar button#close-sidebar {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #cc0000;
+}
+
+/* ================= Seções ================= */
+main section {
+  display: none;
+  padding: 20px;
+}
+
+main section.active {
+  display: block;
+}
+
+/* ================= Cardápio ================= */
+.cardapio {
+  text-align: center;
+}
+
+.pizza-item {
+  display: inline-block;
+  width: calc(30% - 20px);
+  margin: 10px;
+  background-color: #fff3cd;
+  border-radius: 10px;
+  border: 2px solid #cc0000;
+  padding: 15px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pizza-item:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.pizza-item img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 6px;
+  border: 2px solid #cc0000;
+  margin-bottom: 10px;
+}
+
+.pizza-item h2 {
+  font-size: 1.3em;
+  color: #cc0000;
+  margin-bottom: 6px;
+}
+
+.pizza-item p {
+  font-size: 0.95em;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.pizza-item span {
+  font-weight: bold;
+  color: #cc0000;
+  font-size: 1.1em;
+}
+
+/* ================= Carrinho ================= */
+.carrinho {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carrinho h2 {
+  color: #cc0000;
+  margin-bottom: 15px;
+}
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff3cd;
+  border: 2px solid #cc0000;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.carrinho-item img {
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #cc0000;
+}
+
+.carrinho-item h3 {
+  flex: 1;
+  text-align: left;
+  margin-left: 10px;
+  color: #cc0000;
+}
+
+.carrinho-item input {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #cc0000;
+  margin-right: 10px;
+}
+
+#carrinho-total {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #cc0000;
+}
+
+#carrinho-endereco, #carrinho-pagamento {
+  width: 90%;
+  max-width: 400px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #cc0000;
+}
+
+#finalizar-carrinho {
+  background-color: #ffb300;
+  color: white;
+  border: 2px solid #cc0000;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+#finalizar-carrinho:hover {
+  background-color: #cc0000;
+}
+
+/* ================= Evento ================= */
+.evento form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff8e1;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #cc0000;
+}
+
+.evento form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.evento form input,
+.evento form textarea,
+.evento form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 2px solid #cc0000;
+}
+
+.evento form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #cc0000;
+  color: white;
+  border: 2px solid #990000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.evento form button:hover {
+  background-color: #ffb300;
+  color: white;
+}
+
+/* ================= Ajuste da imagem do evento ================= */
+.evento img.evento-img {
+  width: 100%;
+  max-width: 400px; /* tamanho aceitável */
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #cc0000;
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+/* ================= História e Contato ================= */
+.historia, .contato {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff3cd;
+  border-radius: 8px;
+  border: 2px solid #cc0000;
+  margin-bottom: 20px;
+}
+
+.historia h2, .contato h2 {
+  color: #cc0000;
+  margin-bottom: 10px;
+}
+
+/* ================= Responsividade ================= */
+@media (max-width: 1024px) {
+  .pizza-item { width: calc(45% - 20px); }
+}
+
+@media (max-width: 700px) {
+  .pizza-item { width: calc(90% - 20px); }
+}
+
+/* ================= Toast ================= */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #cc0000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 9999;
+  font-weight: bold;
+  pointer-events: none;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ================= História ================= */
+.historia {
+  background: #fff8e1;
+  border: 2px solid #cc0000;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+.historia h2 {
+  text-align: center;
+  color: #cc0000;
+  font-family: 'Luckiest Guy', cursive;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.historia-imagem {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.historia-imagem img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  border: 3px solid #cc0000;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+.historia p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1em;
+}.

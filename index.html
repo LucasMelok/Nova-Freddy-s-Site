@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freddy Fazbear Pizza!</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header>
+    <div class="logo-container">
+      <img src="https://i.imgur.com/cGVf4js.png" alt="Logo Pizzaria" class="logo-central">
+    </div>
+    <button id="menu-toggle">☰</button>
+  </header>
+
+  <!-- ================= Sidebar ================= -->
+  <nav class="sidebar" id="sidebar">
+    <button id="close-sidebar">✖</button>
+    <ul>
+      <li><a href="#" data-section="cardapio">🍕 Cardápio</a></li>
+      <li><a href="#" data-section="carrinho">🛒 Carrinho</a></li>
+      <li><a href="#" data-section="evento">🎉 Agende um evento!</a></li>
+      <li><a href="#" data-section="historia">📜 História</a></li>
+      <li><a href="#" data-section="contato">☎️ Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= Conteúdo Principal ================= -->
+  <main>
+
+    <!-- ================= Cardápio ================= -->
+    <section class="cardapio active" id="cardapio">
+      <!-- Todas as pizzas aqui -->
+      <div class="pizza-item" data-nome="Margherita Pizza" data-preco="9.99" data-img="https://i.imgur.com/GJ12UFJ.jpeg">
+        <img src="https://i.imgur.com/GJ12UFJ.jpeg" alt="Margherita Pizza">
+        <h2>Margherita Pizza</h2>
+        <p>Molho de tomate fresco, mussarela cremosa e manjericão.</p>
+        <span>$9.99</span>
+      </div>
+      <div class="pizza-item" data-nome="Pepperoni Delight" data-preco="11.49" data-img="https://i.imgur.com/WklLEEs.jpeg">
+        <img src="https://i.imgur.com/WklLEEs.jpeg" alt="Pepperoni Delight">
+        <h2>Pepperoni Delight</h2>
+        <p>Generosas fatias de pepperoni com queijo derretido.</p>
+        <span>$11.49</span>
+      </div>
+      <div class="pizza-item" data-nome="Four Cheese" data-preco="12.29" data-img="https://i.imgur.com/VN7UOCj.jpeg">
+        <img src="https://i.imgur.com/VN7UOCj.jpeg" alt="Four Cheese">
+        <h2>Four Cheese</h2>
+        <p>Mussarela, parmesão, gorgonzola e provolone.</p>
+        <span>$12.29</span>
+      </div>
+      <div class="pizza-item" data-nome="BBQ Chicken" data-preco="12.99" data-img="https://i.imgur.com/jfTe9IX.jpeg">
+        <img src="https://i.imgur.com/jfTe9IX.jpeg" alt="BBQ Chicken">
+        <h2>BBQ Chicken</h2>
+        <p>Frango grelhado marinado em molho barbecue, coberto com mussarela e cebola roxa.</p>
+        <span>$12.99</span>
+      </div>
+      <div class="pizza-item" data-nome="Vegetarian Garden" data-preco="10.79" data-img="https://i.imgur.com/qHE6goQ.jpeg">
+        <img src="https://i.imgur.com/qHE6goQ.jpeg" alt="Vegetarian Garden">
+        <h2>Vegetarian Garden</h2>
+        <p>Pimentões, azeitonas, cebolas, cogumelos e milho.</p>
+        <span>$10.79</span>
+      </div>
+      <div class="pizza-item" data-nome="Hawaiian Paradise" data-preco="11.59" data-img="https://i.imgur.com/YAf9Nr8.jpeg">
+        <img src="https://i.imgur.com/YAf9Nr8.jpeg" alt="Hawaiian Paradise">
+        <h2>Hawaiian Paradise</h2>
+        <p>Presunto e abacaxi com queijo derretido.</p>
+        <span>$11.59</span>
+      </div>
+      <div class="pizza-item" data-nome="Meat Lovers" data-preco="13.99" data-img="https://i.imgur.com/kmlJ70V.jpeg">
+        <img src="https://i.imgur.com/kmlJ70V.jpeg" alt="Meat Lovers">
+        <h2>Meat Lovers</h2>
+        <p>Pepperoni, presunto, linguiça e bacon com muito queijo.</p>
+        <span>$13.99</span>
+      </div>
+      <div class="pizza-item" data-nome="Truffle Mushroom" data-preco="14.49" data-img="https://i.imgur.com/MFWp039.jpeg">
+        <img src="https://i.imgur.com/MFWp039.jpeg" alt="Truffle Mushroom">
+        <h2>Truffle Mushroom</h2>
+        <p>Cogumelos salteados, creme branco e azeite trufado.</p>
+        <span>$14.49</span>
+      </div>
+      <div class="pizza-item" data-nome="Spicy Calabrese" data-preco="11.99" data-img="https://i.imgur.com/bvtHjQs.jpeg">
+        <img src="https://i.imgur.com/bvtHjQs.jpeg" alt="Spicy Calabrese">
+        <h2>Spicy Calabrese</h2>
+        <p>Calabresa fatiada com flocos de pimenta.</p>
+        <span>$11.99</span>
+      </div>
+      <div class="pizza-item" data-nome="Chocolate Dream" data-preco="9.49" data-img="https://i.imgur.com/CoCwB4E.jpeg">
+        <img src="https://i.imgur.com/CoCwB4E.jpeg" alt="Chocolate Dream">
+        <h2>Chocolate Dream</h2>
+        <p>Chocolate derretido, banana e açúcar de confeiteiro.</p>
+        <span>$9.49</span>
+      </div>
+    </section>
+
+    <!-- ================= Carrinho ================= -->
+    <section class="carrinho" id="carrinho">
+      <h2>🛒 Seu Carrinho</h2>
+      <div id="carrinho-itens"></div>
+      <p id="carrinho-total">Total: $0.00</p>
+      <input type="text" id="carrinho-endereco" placeholder="Digite seu endereço">
+      <select id="carrinho-pagamento">
+        <option value="" disabled selected>Escolha a forma de pagamento</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="cartao">Cartão</option>
+        <option value="pix">PIX</option>
+      </select>
+      <button id="finalizar-carrinho">Finalizar Pedido</button>
+    </section>
+
+    <!-- ================= Agende um Evento ================= -->
+    <section class="evento" id="evento">
+      <h2>🎉 Agende um Evento!</h2>
+      <p>Traga amigos e familiares para celebrar! Preencha o formulário abaixo:</p>
+      <form id="form-evento">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        <label for="data">Data do evento:</label>
+        <input type="date" id="data" name="data" required>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Detalhes do evento..." required></textarea>
+        <button type="submit">Enviar pedido 🎂</button>
+      </form>
+      <img src="https://i.imgur.com/RZqVW2W.jpeg" alt="Festa na pizzaria" class="evento-img">
+    </section>
+<!-- ================= História ================= -->
+<section class="historia" id="historia">
+  <h2>📜 História</h2>
+
+  <div class="historia-imagem">
+    <img src="https://i.imgur.com/rLxvRE1.jpeg" alt="Fredbear’s Family Diner 1970">
+  </div>
+
+  <p>
+    Em <strong>1970</strong>, nasceu a <strong>Fredbear’s Family Diner</strong>, um pequeno restaurante fundado por 
+    <strong>William Afton</strong> e <strong>Henry Emily</strong>. O local rapidamente se tornou um ponto de alegria para as famílias da região, 
+    conhecido por suas apresentações com os primeiros <strong>animatrônicos</strong> do grupo: 
+    <strong>Fredbear</strong> e <strong>Spring Bonnie</strong>.
+  </p>
+
+  <p>
+    Esses modelos iniciais eram especiais por utilizarem o complexo sistema de <strong>mecanismos de mola</strong>, 
+    conhecidos como <strong>springlocks</strong>, que permitiam transformar os trajes em 
+    <strong>animatrônicos autônomos</strong> ou <strong>fantasias vestíveis</strong>. Assim, tanto Afton quanto Henry podiam usar os trajes 
+    para animar o público, trazendo vida aos personagens de forma realista e impressionante para a época.
+  </p>
+
+  <p>
+    A <strong>Fredbear’s Family Diner</strong> marcou o início de uma era — o primeiro passo para o futuro império de entretenimento 
+    que se tornaria a lendária <strong>Freddy Fazbear’s Pizza</strong>.
+  </p>
+<!-- Freddy Fazbear's Pizza (1983) -->
+  <div class="historia-imagem">
+    <img src="https://i.imgur.com/yV7Ap0J.jpeg" alt="Freddy Fazbear’s Pizza 1983">
+  </div>
+
+  <p>
+    Em <strong>1983</strong>, foi fundada a <strong>Fazbear Entertainment</strong>, dando início a uma nova era de diversão para as famílias. 
+    Nesse mesmo ano, surgiu o restaurante <strong>Freddy Fazbear’s Pizza</strong>, trazendo um novo conceito de entretenimento infantil. 
+    Com ele, nasceram também os animatrônicos <strong>Freddy Fazbear</strong>, <strong>Bonnie</strong>, <strong>Chica</strong> e <strong>Foxy</strong>, 
+    criados para animar o público com músicas, festas e apresentações ao vivo.
+  </p>
+
+  <p>
+    A <strong>Freddy Fazbear’s Pizza</strong> rapidamente se tornou um dos locais mais queridos pelas crianças, consolidando o sucesso da 
+    <strong>Fazbear Entertainment</strong> no ramo do entretenimento familiar.
+  </p>
+<!-- Reabertura e Era dos Toy Animatronics (1985–1987) -->
+  <div class="historia-imagem">
+    <img src="https://i.imgur.com/BEMlwd3.jpeg" alt="Nova Freddy Fazbear’s Pizza 1987">
+  </div>
+
+  <p>
+    Em <strong>1985</strong>, após uma série de incidentes trágicos, a primeira <strong>Freddy Fazbear’s Pizza</strong> foi forçada a encerrar suas atividades. 
+    No entanto, dois anos depois, em busca de reerguer a marca e recuperar a confiança do público, uma nova e modernizada pizzaria foi inaugurada com o mesmo nome.
+  </p>
+
+  <p>
+    Desta vez, os animatrônicos foram projetados com <strong>tecnologia de ponta</strong> e <strong>sistemas de segurança avançados</strong> em seus mecanismos. 
+    Assim nasceram <strong>Toy Freddy</strong>, <strong>Toy Bonnie</strong>, <strong>Toy Chica</strong> e <strong>Toy Foxy</strong>, representando uma nova era de entretenimento — 
+    mais brilhante, mais segura e totalmente reformulada.
+  </p>
+<!-- Retorno Clássico da Freddy Fazbear’s Pizza (1988) -->
+  <div class="historia-imagem">
+    <img src="https://i.imgur.com/oDt1MdW.jpeg" alt="Freddy Fazbear’s Pizza 1988">
+  </div>
+
+  <p>
+    Após novos incidentes infelizes, a segunda <strong>Freddy Fazbear’s Pizza</strong> acabou sendo fechada. 
+    Porém, apenas um ano depois, em <strong>1988</strong>, uma nova localização foi inaugurada, trazendo de volta o encanto das antigas apresentações.
+  </p>
+
+  <p>
+    Dessa vez, foram utilizadas <strong>reformulações dos animatrônicos originais de 1983</strong>, agora com visuais mais refinados, 
+    expressivos e voltados para um estilo mais <strong>clássico e elegante</strong>. Assim nasceu mais uma 
+    <strong>Freddy Fazbear’s Pizza</strong>, marcando o retorno dos personagens que conquistaram gerações e mantendo viva a tradição 
+    do entretenimento familiar.
+  </p>
+<!-- Afton Robotics e Circus Baby’s Pizza World (1993) -->
+  <div class="historia-imagem">
+    <img src="https://i.imgur.com/Wl2AWE8.jpeg" alt="Circus Baby’s Pizza World 1993">
+  </div>
+
+  <p>
+    Em <strong>1993</strong>, após o fechamento da <strong>Freddy Fazbear’s Pizza</strong> devido a diversos fatores, 
+    um dos fundadores originais, <strong>William Afton</strong>, decidiu seguir um novo caminho. Por meio de sua própria empresa, 
+    a <strong>Afton Robotics</strong>, ele fundou uma localização irmã da antiga pizzaria: a <strong>Circus Baby’s Pizza World</strong>.
+  </p>
+
+  <p>
+    O local trazia uma proposta inovadora, estrelando animatrônicos altamente avançados para a época — 
+    <strong>Circus Baby</strong>, <strong>Ballora</strong>, <strong>Funtime Freddy</strong> e <strong>Funtime Foxy</strong>. 
+    Esses modelos eram equipados com a mais moderna tecnologia disponível, contando com 
+    <strong>dispersores de hélio</strong>, <strong>fabricadores de sorvete</strong> e 
+    <strong>mecanismos de movimentação silenciosa e precisa</strong>, garantindo um espetáculo impressionante para o público.
+  </p>
+
+  <p>
+    Porém, devido a um <strong>vazamento de gás</strong>, a pizzaria precisou ser fechada já em seu 
+    <strong>primeiro dia de funcionamento</strong>. Mesmo assim, movido por sua determinação em continuar levando alegria às crianças, 
+    William Afton criou um sistema inédito de <strong>aluguel de animatrônicos</strong>, conhecido como 
+    <strong>Circus Baby Entertainment and Rental</strong>. Esse novo modelo permitia que pessoas e empresas contratassem os animatrônicos 
+    para <strong>festas e eventos particulares</strong>, mantendo viva a magia e o sucesso do entretenimento criado por Afton.
+  </p>
+<!-- Renascimento da Freddy Fazbear’s Pizza (2025) -->
+  <div class="historia-imagem">
+    <img src="https://i.imgur.com/MhyxY8N.jpeg" alt="Nova Fazbear’s Pizza 2025">
+  </div>
+
+  <p>
+    Em <strong>2025</strong>, inspirado pelos restaurantes temáticos de animatrônicos que marcaram sua infância, 
+    <strong>Alex Berrólder</strong> decidiu investir em um sonho de longa data. Movido pela nostalgia e pelo desejo de reviver 
+    uma era de diversão e encanto, ele adquiriu uma <strong>participação na Fazbear Entertainment</strong>, o que lhe permitiu 
+    contribuir diretamente para o renascimento da franquia que tanto o fascinou quando criança.
+  </p>
+
+  <p>
+    Com seus próprios recursos, Alex inaugurou uma nova <strong>Freddy Fazbear’s Pizza</strong>, cuidadosamente projetada no 
+    <strong>estilo clássico das décadas passadas</strong>, recriando o ambiente, o visual e o espírito dos antigos restaurantes. 
+    A iniciativa rapidamente conquistou o público, despertando <strong>lembranças nos fãs mais antigos</strong> e trazendo 
+    <strong>alegria às novas gerações</strong>.
+  </p>
+
+  <p>
+    Hoje, a nova <strong>Freddy Fazbear’s Pizza</strong>, localizada no <strong>Texas, EUA</strong>, representa o retorno triunfante 
+    de um ícone do entretenimento familiar — unindo passado e presente em um mesmo palco de diversão e boas lembranças.
+  </p>
+
+  <p>
+    Sobre a <strong>tentativa falha de transformar a marca em uma atração de terror</strong>, realizada por certas pessoas há cerca 
+    de dois anos, <strong>Alex</strong> comentou que <strong>não considera apropriado associar a Freddy Fazbear’s Pizza a algo assustador</strong>. 
+    Segundo ele, o restaurante sempre foi e continuará sendo um <strong>símbolo de alegria e diversão</strong>, e não um lugar a temer. 
+    Mesmo com as <strong>lendas urbanas</strong> que surgiram ao longo dos anos, Alex afirma com convicção: 
+    <em>“Todos sabemos que fantasmas não existem — o que existe é a vontade de continuar fazendo as pessoas sorrirem.”</em>
+  </p>
+
+  <p>
+    Agora, com <strong>novos animatrônicos</strong> e <strong>designs atualizados</strong>, mas respeitando fielmente o visual clássico 
+    que conquistou gerações, a pizzaria — batizada de <strong>Nova Fazbear’s Pizza</strong> — é 
+    <strong>inaugurada hoje, 06 de maio de 2025</strong>. Com tecnologia moderna, segurança aprimorada e o mesmo espírito acolhedor 
+    de sempre, o <strong>futuro dessa amada franquia</strong> parece mais <strong>brilhante</strong> do que nunca.
+  </p>
+</section>
+</section>
+    <!-- ================= Contato ================= -->
+    <section class="contato" id="contato">
+      <h2>☎️ Contato</h2>
+      <p>Email: contato@pizzariafantastica.com</p>
+      <p>Telefone: (11) 1234-5678</p>
+      <p>Endereço: Rua das Pizzas, 123, Cidade SP</p>
+    </section>
+
+  </main>
+
+  <!-- ================= JS ================= -->
+  <script src="js/index.js"></script>
+</body>
+</html>
